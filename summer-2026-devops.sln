@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab1", "lab1", "{ED13059D-E407-5174-3886-4FD5BEA505AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4FD76D8D-A782-4542-F600-FEDC14639BD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mywebapp", "lab1\src\mywebapp\mywebapp.csproj", "{7DF25C50-4E04-429D-06E8-28F2055AABA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DF25C50-4E04-429D-06E8-28F2055AABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF25C50-4E04-429D-06E8-28F2055AABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF25C50-4E04-429D-06E8-28F2055AABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF25C50-4E04-429D-06E8-28F2055AABA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FD76D8D-A782-4542-F600-FEDC14639BD0} = {ED13059D-E407-5174-3886-4FD5BEA505AB}
+		{7DF25C50-4E04-429D-06E8-28F2055AABA8} = {4FD76D8D-A782-4542-F600-FEDC14639BD0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C04D464A-289E-47A3-AA10-6B74E471417C}
+	EndGlobalSection
+EndGlobal
