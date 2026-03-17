@@ -4,6 +4,8 @@ using mywebapp.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSystemd();
+
 builder.Configuration.AddJsonFile("/etc/mywebapp/config.json", optional: true, reloadOnChange: true);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
@@ -14,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(8000);
+    options.UseSystemd();
 });
 
 var app = builder.Build();
