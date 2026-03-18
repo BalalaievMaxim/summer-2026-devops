@@ -32,7 +32,12 @@ done
 useradd -r -s /usr/sbin/nologin $APP_LINUX_USER
 
 # operator з обмеженим sudo
-useradd -m -s /bin/bash operator
+if getent group operator > /dev/null; then
+    useradd -m -s /bin/bash -g operator operator
+else
+    useradd -m -s /bin/bash operator
+fi
+
 echo "operator:12345678" | chpasswd
 chage -d 0 operator
 cat <<EOF > /etc/sudoers.d/operator
