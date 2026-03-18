@@ -57,13 +57,6 @@ cat <<EOF > $CONFIG_DIR/config.json
 {
   "ConnectionStrings": {
     "DefaultConnection": "Host=127.0.0.1;Database=$DB_NAME;Username=$DB_USER;Password=$DB_PASSWORD"
-  },
-  "Kestrel": {
-    "Endpoints": {
-      "Http": {
-        "Url": "http://127.0.0.1:$APP_PORT"
-      }
-    }
   }
 }
 EOF
