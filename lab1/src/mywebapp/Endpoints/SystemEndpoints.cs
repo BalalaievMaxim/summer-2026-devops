@@ -1,3 +1,4 @@
+using System.Text;
 using mywebapp.Data;
 
 namespace mywebapp.Endpoints;
@@ -39,7 +40,7 @@ public static class SystemEndpoints
                 </body>
                 </html>";
 
-            return Results.Content(html, "text/html");
+            return Results.Content(html, "text/html", Encoding.UTF8);
         });
     }
 }
