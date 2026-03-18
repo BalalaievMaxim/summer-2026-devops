@@ -1,6 +1,7 @@
 <h1>Документація по розробленому web-застосунку</h1>
 
 <h2>Технологічний стек</h2>
+
 - ASP.NET 10
 - Entity Framework Core
 - PostgreSQL
