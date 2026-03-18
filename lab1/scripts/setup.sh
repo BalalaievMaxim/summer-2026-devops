@@ -29,7 +29,7 @@ for user in student teacher; do
     chage -d 0 $user
 done
 
-useradd -r -s /usr/sbin/nologin $APP_USER
+useradd -r -s /usr/sbin/nologin $APP_LINUX_USER
 
 # operator з обмеженим sudo
 useradd -m -s /bin/bash operator
@@ -50,7 +50,7 @@ sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'postgres';"
 echo "4. Publishing the application"
 mkdir -p $PUBLISH_DIR
 dotnet publish "$REPO_ROOT/src/mywebapp/mywebapp.csproj" -c Release -o $PUBLISH_DIR
-chown -R $APP_USER:$APP_USER $PUBLISH_DIR
+chown -R $APP_LINUX_USER:$APP_LINUX_USER $PUBLISH_DIR
 
 mkdir -p $CONFIG_DIR
 cat <<EOF > $CONFIG_DIR/config.json
@@ -67,7 +67,7 @@ cat <<EOF > $CONFIG_DIR/config.json
   }
 }
 EOF
-chown -R $APP_USER:$APP_USER $CONFIG_DIR
+chown -R $APP_LINUX_USER:$APP_LINUX_USER $CONFIG_DIR
 
 echo "5. Setting up Systemd (Socket Activation)"
 # сокет-файл
@@ -93,7 +93,7 @@ After=network.target postgresql.service
 WorkingDirectory=$PUBLISH_DIR
 ExecStart=/usr/bin/dotnet $PUBLISH_DIR/mywebapp.dll
 Restart=always
-User=$APP_USER
+User=$APP_LINUX_USER
 Environment=ASPNETCORE_ENVIRONMENT=Production
 
 [Install]
