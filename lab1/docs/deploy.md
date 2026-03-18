@@ -2,7 +2,7 @@
 
 <h2>Налаштування середовища (віртуальної машини)</h2>
 
-- OS: [Ubuntu 20.04 Server](https://ubuntu.com/download/server)
+- OS: [Ubuntu 24.04 Server](https://ubuntu.com/download/server)
 - Мінімальні виділені ресурси: 1 vCPU, 2 GB RAM для забезпечення стабільної роботи PostgreSQL, Nginx та .NET SDK
 - Налаштування мережі:
     - Тип підключення: NAT
