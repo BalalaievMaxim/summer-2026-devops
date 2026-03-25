@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # перевірка на root
 if [ "$EUID" -ne 0 ]; then
@@ -11,7 +12,7 @@ APP_PORT=8000
 DB_NAME="mywebappdb"
 DB_USER="postgres"
 DB_PASSWORD="postgres"
-APP_LINUX_USER="mywebapp"
+APP_LINUX_USER="app"
 CONFIG_DIR="/etc/mywebapp"
 REPO_ROOT=$(dirname $(dirname $(readlink -f $0)))
 PUBLISH_DIR="/opt/mywebapp"
