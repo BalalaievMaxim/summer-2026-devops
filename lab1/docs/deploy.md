@@ -26,8 +26,8 @@ sudo apt-get install openssh-server
 Увійдіть на віртуальну машину (можливо через SSH) під користувачем root (або будь-яким із sudo правами)
 
 ```bash
-git clone https://github.com/BalalaievMaxim/summer-2026-devops
-cd summer-2026-devops/lab1/scripts
+git clone https://github.com/BalalaievMaxim/summer-2026-devops-labs-1-2
+cd summer-2026-devops-labs-1-2/lab1/scripts
 sudo bash ./setup.sh
 ```
 
@@ -52,8 +52,8 @@ curl -i http://localhost:8000/health/ready
 Перед виконанням переконайтеся, що у вас встановлені Docker та Docker Compose.
 
 ```bash
-git clone https://github.com/BalalaievMaxim/summer-2026-devops
-cd summer-2026-devops/lab1/
+git clone https://github.com/BalalaievMaxim/summer-2026-devops-labs-1-2
+cd summer-2026-devops-labs-1-2/lab1/
 docker compose up -d
 ```
 
